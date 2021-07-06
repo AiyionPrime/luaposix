@@ -7,7 +7,7 @@ print ('parent: my pid is: ' .. M.getpid())
 
 local childpid = M.fork ()
 
-if childpid == -1 then
+if childpid == nil then
    print('parent: The fork failed.')
 elseif childpid == 0 then
    print('child: Hello World! I am pid: ' .. M.getpid())
